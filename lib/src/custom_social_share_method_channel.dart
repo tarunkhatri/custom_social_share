@@ -26,7 +26,7 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
 
   @override
   Future<bool> to(ShareWith shareWith, String content) {
-    return methodChannel.invokeMethod<bool>(shareWith.value,
+    return methodChannel.invokeMethod<bool>(shareWith.name,
         {"content": content}).then<bool>((bool? value) => value ?? false);
   }
 
@@ -40,7 +40,7 @@ class MethodChannelCustomSocialShare extends CustomSocialSharePlatform {
       return map.keys
           .map((e) {
             for (var item in ShareWith.values) {
-              if (e == item.value) {
+              if (e == item.name) {
                 return item;
               }
             }

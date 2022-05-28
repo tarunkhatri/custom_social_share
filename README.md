@@ -18,7 +18,10 @@ Please use the latest version of package
 dependencies:
   ...
   
-  custom_social_share: ^latest_version
+  custom_social_share:
+      git:
+        url: https://github.com/tarunkhatri/custom_social_share.git
+        ref: master
 ```
 
 ## Setup
